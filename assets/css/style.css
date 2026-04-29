@@ -1,0 +1,96 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+/* Judul */
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Navbar pakai Flexbox */
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+table tr {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+table td {
+  border: none;
+}
+
+table a {
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+table a:hover {
+  background-color: #2980b9;
+}
+
+/* Konten */
+p {
+  margin: 15px 0;
+  text-align: justify;
+}
+
+/* Gambar */
+img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 50%;
+}
+
+/* List */
+ul {
+  margin-left: 30px;
+}
+
+/* Table data */
+table:last-of-type {
+  width: 100%;
+  margin-top: 20px;
+}
+
+table:last-of-type th {
+  background-color: #2c3e50;
+  color: white;
+}
+
+table:last-of-type td,
+table:last-of-type th {
+  padding: 10px;
+  text-align: center;
+}
+
+/* POSITIONING EXAMPLE */
+img {
+  position: relative;
+  top: 0;
+}
+
+/* CONTAINER (opsional kalau mau rapih banget) */
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
