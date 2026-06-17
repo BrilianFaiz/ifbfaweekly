@@ -1,8 +1,18 @@
 <?php
-require_once './connections.php';
-
+require 'connections.php';
 // query ambil data mahasiswa
-$query = mysqli_query($conn, "SELECT * FROM mahasiswa");
+$query = "select * from mahasiswa";
+$mahasiswas = tampildata($query); // ambil data mahasiswa
+
+//ambil data mahasiswa
+// $mahasiswa = mysqli_fetch_assoc($query);
+//$mahasiswa = mysqli_fetch_array($query);
+// $mahasiswa = mysqli_fetch_row($query);
+//$mahasiswa = mysqli_fetch_object($query);
+
+//  while ($row = mysqli_fetch_assoc($query)) {
+//      var_dump($row);
+//  }
 ?>
 
 <!DOCTYPE html>
@@ -39,8 +49,7 @@ $query = mysqli_query($conn, "SELECT * FROM mahasiswa");
         </tr>
         <?php
         $no = 1;
-
-        while ($row = mysqli_fetch_assoc($query)):
+        foreach ($mahasiswas as $mhs) : ?>
             ?>
             <tr>
                 <td align="center">
@@ -48,31 +57,31 @@ $query = mysqli_query($conn, "SELECT * FROM mahasiswa");
                 </td>
 
                 <td>
-                    <?= $row['nama']; ?>
+                    <?= $mhs['nama']; ?>
                 </td>
 
                 <td>
-                    <?= $row['nim']; ?>
+                    <?= $mhs['nim']; ?>
                 </td>
 
                 <td>
-                    <?= $row['jurusan']; ?>
+                    <?= $mhs['jurusan']; ?>
                 </td>
 
                 <td>
-                    <?= $row['email']; ?>
+                    <?= $mhs['email']; ?>
                 </td>
 
                 <td>
-                    <?= $row['no_hp']; ?>
+                    <?= $mhs['no_hp']; ?>
                 </td>
 
                 <td align="center">
-                    <img src="assets/images/<?= $row['foto']; ?>" width="120px">
+                    <img src="assets/images/<?= $mhs['foto']; ?>" width="120px">
                 </td>
             </tr>
 
-        <?php endwhile; ?>
+        <?php endforeach; ?>
     </table>
     <br>
     <hr>
