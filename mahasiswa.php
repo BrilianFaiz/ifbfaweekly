@@ -1,5 +1,6 @@
 <?php
 require 'connections.php';
+
 // query ambil data mahasiswa
 $query = "select * from mahasiswa";
 $mahasiswas = tampildata($query); // ambil data mahasiswa
@@ -46,11 +47,12 @@ $mahasiswas = tampildata($query); // ambil data mahasiswa
             <th>Email</th>
             <th>No HP</th>
             <th>Foto</th>
+            <th>aksi</th>
         </tr>
         <?php
         $no = 1;
-        foreach ($mahasiswas as $mhs) : ?>
-            ?>
+        foreach ($mahasiswas as $mhs): ?>
+            
             <tr>
                 <td align="center">
                     <?= $no++; ?>
@@ -78,6 +80,10 @@ $mahasiswas = tampildata($query); // ambil data mahasiswa
 
                 <td align="center">
                     <img src="assets/images/<?= $mhs['foto']; ?>" width="120px">
+                </td>
+                <td>
+                    <a href="deletedata.php?id=<?= $mhs['id'] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><button>deleted</button></a>
+                    <a href="editdata.php?id=<?= $mhs['id'] ?>"><button>edit</button></a>
                 </td>
             </tr>
 
