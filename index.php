@@ -16,6 +16,7 @@
     <td><a href="profile.php">Profile</a></td>
     <td><a href="contact.php">Contact</a></td>
     <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
+    <td><a href="login.php">Login</a></td>
   </tr>
 </table>
 <p><b>nama pembuat: <br />
@@ -34,7 +35,7 @@ jabatan : <i>profesor</i></b></p>
   <li>W<sub>o</sub>S</li>
 </ul>
 
-  <table border={1}>
+  <table border="1">
   <thead>
     <th>head 1</th>
     <th>head 2</th>

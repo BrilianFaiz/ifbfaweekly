@@ -1,6 +1,8 @@
 <?php
 require 'connections.php';
 
+
+
 // query ambil data mahasiswa
 $query = "select * from mahasiswa";
 $mahasiswas = tampildata($query); // ambil data mahasiswa
